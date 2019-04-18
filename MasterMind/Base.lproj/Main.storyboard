@@ -62,6 +62,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Easy"/>
                                 <connections>
+                                    <action selector="easyButtonPress:" destination="BPG-vb-0zZ" eventType="touchUpInside" id="3Ue-J5-Qdq"/>
                                     <segue destination="YLH-Sq-7I0" kind="presentation" modalTransitionStyle="crossDissolve" id="w6V-Z9-oEP"/>
                                 </connections>
                             </button>
@@ -70,6 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Medium"/>
                                 <connections>
+                                    <action selector="medButtonPress:" destination="BPG-vb-0zZ" eventType="touchUpInside" id="f9j-jS-FhM"/>
                                     <segue destination="YLH-Sq-7I0" kind="presentation" modalTransitionStyle="crossDissolve" id="75I-Fv-tGt"/>
                                 </connections>
                             </button>
@@ -92,6 +94,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hard"/>
                                 <connections>
+                                    <action selector="hardButtonPress:" destination="BPG-vb-0zZ" eventType="touchUpInside" id="but-kI-a19"/>
                                     <segue destination="YLH-Sq-7I0" kind="presentation" modalTransitionStyle="crossDissolve" id="orI-Dg-Fdz"/>
                                 </connections>
                             </button>
@@ -287,7 +290,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="41Z-Gb-LlL"/>
+        <segue reference="orI-Dg-Fdz"/>
         <segue reference="jfX-U9-MRz"/>
     </inferredMetricsTieBreakers>
 </document>

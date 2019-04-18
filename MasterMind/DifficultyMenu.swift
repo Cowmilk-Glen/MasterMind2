@@ -9,11 +9,32 @@
 import UIKit
 
 class DifficultyMenu: UIViewController {
+    
+    var chosenDiff : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is PlayGame {
+            let vc = segue.destination as? PlayGame
+            vc?.difficulty = chosenDiff
+        }
+    }
+    
+    @IBAction func easyButtonPress(_ sender: Any) {
+        chosenDiff = 0
+    }
+    
+    @IBAction func medButtonPress(_ sender: Any) {
+        chosenDiff = 1
+    }
+    
+    @IBAction func hardButtonPress(_ sender: Any) {
+        chosenDiff = 2
     }
     
 
