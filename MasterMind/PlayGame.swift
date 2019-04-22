@@ -16,25 +16,45 @@ class PlayGame: UIViewController {
     }*/
     
     var difficulty: Int = 0
-    let easySet: Set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    let medSet: Set = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    let hardSet: Set = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    var answerSet: Set<String> = ["", "", "", ""]
+    let easyArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    let medArr: [String] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    let hardArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    var answerArr: [String] = ["", "", "", ""]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print (difficulty)
-        
-        //Switch Function call
-        //Answer Function call
-        
+
+        //Populate answerArr
+        answerGenerator(diff: difficulty)
+        printAnswerArr()
         //Main Game Function call
     }
     
-    func randomizer() {
-        
+    func answerGenerator(diff: Int) {
+        switch diff {
+        case 0:
+            randomizer(poolSet: easyArr)
+        case 1:
+            randomizer(poolSet: medArr)
+        case 2:
+            randomizer(poolSet: hardArr)
+        default:
+            print("Error- Randomizer(): Incorrect difficulty")
+        }
+    }
+    
+    func randomizer(poolSet: [String]) {
+        for i in 0..<4 {
+            answerArr[i] = poolSet[Int.random(in: 0..<poolSet.count)]
+        }
+    }
+    
+    //Utility
+    func printAnswerArr() {
+        for i in 0..<4 {
+            print(answerArr[i])
+        }
     }
     
     

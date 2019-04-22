@@ -14,7 +14,6 @@
 		34D6179A22568B0600767D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6179822568B0600767D5E /* LaunchScreen.storyboard */; };
 		34D617A522568B0600767D5E /* MasterMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D617A422568B0600767D5E /* MasterMindTests.swift */; };
 		34D617B022568B0600767D5E /* MasterMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D617AF22568B0600767D5E /* MasterMindUITests.swift */; };
-		9CCC31B1225FA9D40092EFE3 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B0225FA9D40092EFE3 /* MainMenu.swift */; };
 		9CCC31B3225FA9EE0092EFE3 /* DifficultyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */; };
 		9CCC31B5225FAA050092EFE3 /* PlayGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B4225FAA050092EFE3 /* PlayGame.swift */; };
 		9CCC31B7225FAA140092EFE3 /* ResultsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B6225FAA140092EFE3 /* ResultsMenu.swift */; };
@@ -52,7 +51,6 @@
 		34D617AB22568B0600767D5E /* MasterMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D617AF22568B0600767D5E /* MasterMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMindUITests.swift; sourceTree = "<group>"; };
 		34D617B122568B0600767D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCC31B0225FA9D40092EFE3 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyMenu.swift; sourceTree = "<group>"; };
 		9CCC31B4225FAA050092EFE3 /* PlayGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGame.swift; sourceTree = "<group>"; };
 		9CCC31B6225FAA140092EFE3 /* ResultsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsMenu.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			children = (
 				34D6178F22568B0400767D5E /* AppDelegate.swift */,
 				34D6179122568B0400767D5E /* ViewController.swift */,
-				9CCC31B0225FA9D40092EFE3 /* MainMenu.swift */,
 				9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */,
 				9CCC31B4225FAA050092EFE3 /* PlayGame.swift */,
 				9CCC31B6225FAA140092EFE3 /* ResultsMenu.swift */,
@@ -272,7 +269,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				34D6179222568B0400767D5E /* ViewController.swift in Sources */,
-				9CCC31B1225FA9D40092EFE3 /* MainMenu.swift in Sources */,
 				34D6179022568B0400767D5E /* AppDelegate.swift in Sources */,
 				9CCC31B5225FAA050092EFE3 /* PlayGame.swift in Sources */,
 				9CCC31B9225FAADD0092EFE3 /* PauseMenu.swift in Sources */,
