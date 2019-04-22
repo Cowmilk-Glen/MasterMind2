@@ -28,7 +28,9 @@ class PlayGame: UIViewController {
         //Populate answerArr
         answerGenerator(diff: difficulty)
         printAnswerArr()
+        
         //Main Game Function call
+        
     }
     
     func answerGenerator(diff: Int) {
