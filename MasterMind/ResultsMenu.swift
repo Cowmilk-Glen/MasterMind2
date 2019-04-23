@@ -14,6 +14,8 @@ class ResultsMenu: UIViewController {
     @IBOutlet weak var timeTakenLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var triesLabel: UILabel!
+    @IBOutlet weak var victoryLabel: UILabel!
+    @IBOutlet weak var defeatLabel: UILabel!
     
     var answerSet: [String] = ["", "", "", ""]
     var answerLabelText: String = ""
@@ -29,16 +31,22 @@ class ResultsMenu: UIViewController {
         }
     }
     
-    /*
+    
     func resultsPrinter() {
         if victoryResult == false {
-            
+            victoryLabel.isHidden = true
+            defeatLabel.isHidden = false
         }
-    }*/
+        else {
+            victoryLabel.isHidden = false
+            defeatLabel.isHidden = true
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         printAnswerArr()
+        resultsPrinter()
         answerSetLabel.text = answerLabelText
         timeTakenLabel.text = timeLabelText
         difficultyLabel.text = difficultyLabelText

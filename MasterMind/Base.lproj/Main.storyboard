@@ -253,9 +253,11 @@
                     </view>
                     <connections>
                         <outlet property="answerSetLabel" destination="6jW-5v-UVx" id="WIn-Af-HHC"/>
+                        <outlet property="defeatLabel" destination="gp0-fW-b9v" id="iVw-g5-NWF"/>
                         <outlet property="difficultyLabel" destination="PDO-CP-Cs4" id="KYy-31-rsA"/>
                         <outlet property="timeTakenLabel" destination="Ust-vs-knk" id="kld-Zz-3Lr"/>
                         <outlet property="triesLabel" destination="q18-PW-9uB" id="GUW-eS-mDF"/>
+                        <outlet property="victoryLabel" destination="bGU-Cg-TZQ" id="koX-V6-ABs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV8-6M-lWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
