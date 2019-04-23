@@ -206,21 +206,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ust-vs-knk" userLabel="pTimeTaken">
-                                <rect key="frame" x="183" y="246" width="8" height="21"/>
+                                <rect key="frame" x="114" y="246" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDO-CP-Cs4" userLabel="pDifficulty">
-                                <rect key="frame" x="183" y="306" width="8" height="21"/>
+                                <rect key="frame" x="114" y="306" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q18-PW-9uB" userLabel="pTries">
-                                <rect key="frame" x="183" y="370" width="8" height="21"/>
+                                <rect key="frame" x="114" y="370" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -241,7 +241,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6jW-5v-UVx" userLabel="pAnswer">
-                                <rect key="frame" x="114" y="182" width="146" height="21"/>
+                                <rect key="frame" x="114" y="182" width="150" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -253,6 +253,9 @@
                     </view>
                     <connections>
                         <outlet property="answerSetLabel" destination="6jW-5v-UVx" id="WIn-Af-HHC"/>
+                        <outlet property="difficultyLabel" destination="PDO-CP-Cs4" id="KYy-31-rsA"/>
+                        <outlet property="timeTakenLabel" destination="Ust-vs-knk" id="kld-Zz-3Lr"/>
+                        <outlet property="triesLabel" destination="q18-PW-9uB" id="GUW-eS-mDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV8-6M-lWx" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,9 +11,16 @@ import UIKit
 class ResultsMenu: UIViewController {
     
     @IBOutlet weak var answerSetLabel: UILabel!
+    @IBOutlet weak var timeTakenLabel: UILabel!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var triesLabel: UILabel!
     
     var answerSet: [String] = ["", "", "", ""]
     var answerLabelText: String = ""
+    var timeLabelText: String = ""
+    var difficultyLabelText: String = ""
+    var triesLabelText: String = ""
+    var victoryResult: Bool = false
     
     func printAnswerArr() {
         for i in 0..<4 {
@@ -21,11 +28,21 @@ class ResultsMenu: UIViewController {
             answerLabelText += answerSet[i]
         }
     }
+    
+    /*
+    func resultsPrinter() {
+        if victoryResult == false {
+            
+        }
+    }*/
 
     override func viewDidLoad() {
         super.viewDidLoad()
         printAnswerArr()
         answerSetLabel.text = answerLabelText
+        timeTakenLabel.text = timeLabelText
+        difficultyLabel.text = difficultyLabelText
+        triesLabel.text = triesLabelText
         // Do any additional setup after loading the view.
     }
 

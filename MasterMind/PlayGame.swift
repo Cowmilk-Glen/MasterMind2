@@ -15,11 +15,16 @@ class PlayGame: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }*/
     
-    var difficulty: Int = 0
     let easyArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     let medArr: [String] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     let hardArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    
     var answerArr: [String] = ["", "", "", ""]
+    var difficulty: Int = 0
+    var difficultyLabel: String = ""
+    var timeTaken: Float = 0.0
+    var triesTaken: Int = 0
+    var vicResult: Bool = false
     
     
     override func viewDidLoad() {
@@ -37,10 +42,13 @@ class PlayGame: UIViewController {
         switch diff {
         case 0:
             randomizer(poolSet: easyArr)
+            difficultyLabel = "Easy"
         case 1:
             randomizer(poolSet: medArr)
+            difficultyLabel = "Medium"
         case 2:
             randomizer(poolSet: hardArr)
+            difficultyLabel = "Hard"
         default:
             print("Error- Randomizer(): Incorrect difficulty")
         }
@@ -67,6 +75,10 @@ class PlayGame: UIViewController {
         if segue.destination is ResultsMenu {
             let vc = segue.destination as? ResultsMenu
             vc?.answerSet = answerArr
+            vc?.timeLabelText = String(timeTaken)
+            vc?.difficultyLabelText = difficultyLabel
+            vc?.triesLabelText = String(triesTaken)
+            vc?.victoryResult = vicResult
         }
     }
     
