@@ -59,6 +59,16 @@ class PlayGame: UIViewController {
         }
     }
     
+    func mainGameLoop() {
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ResultsMenu {
+            let vc = segue.destination as? ResultsMenu
+            vc?.answerSet = answerArr
+        }
+    }
     
 
     /*
