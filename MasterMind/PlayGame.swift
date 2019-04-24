@@ -59,15 +59,13 @@ class PlayGame: UIViewController {
     var triesTaken: Int = 0
     var lives: Int = 5
     var curLives: Int = 5
+    var completed: Int = 0
     var vicResult: Bool = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image1.image = UIImage(named: "red")
-        image2.image = UIImage(named: "red")
-        image3.image = UIImage(named: "red")
-        image4.image = UIImage(named: "red")
+        
         
         livesLabel.text = "Lives: \(curLives) / \(lives)"
 
@@ -78,7 +76,18 @@ class PlayGame: UIViewController {
         //Main Game Function call
         
     }
-    
+    func setAllRed(){
+        image1.image = UIImage(named: "red")
+        image2.image = UIImage(named: "red")
+        image3.image = UIImage(named: "red")
+        image4.image = UIImage(named: "red")
+    }
+    func setZeros(){
+        label1.text = checkArray[0]
+        label2.text = checkArray[0]
+        label3.text = checkArray[0]
+        label4.text = checkArray[0]
+    }
     func answerGenerator(diff: Int) {
         switch diff {
         case 0:
@@ -97,10 +106,7 @@ class PlayGame: UIViewController {
             print("Error- Randomizer(): Incorrect difficulty")
         }
          checkArray = checkDif()
-        label1.text = checkArray[0]
-        label2.text = checkArray[0]
-        label3.text = checkArray[0]
-        label4.text = checkArray[0]
+         setZeros()
     }
     
     func checkDif()->[String]{
@@ -116,6 +122,12 @@ class PlayGame: UIViewController {
         else{
             return custArr
         }
+    }
+    func resetIfWin(){
+        //var dif = checkDif()
+        answerGenerator(diff: difficulty)
+        setAllRed()
+        
     }
     func randomizer(poolSet: [String]) {
         for i in 0..<4 {
@@ -133,6 +145,7 @@ class PlayGame: UIViewController {
     func mainGameLoop() {
     
     }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is ResultsMenu {
@@ -240,21 +253,32 @@ class PlayGame: UIViewController {
     
     @IBAction func checkAnswer(_ sender: UIImageView) {
         triesTaken += 1
-        curLives -= 1
-        livesLabel.text = "Lives: \(curLives) / \(lives)"
+       
+        
         
         screenArr = [label1.text,label2.text,label3.text,label4.text] as! [String]
         print(screenArr)
         checkColor()
         var winner = isAllGreen()
         if winner == true {
-            if curLives > lives {
+            livesLabel.text = "Lives: \(curLives) / \(lives) Tries:\(triesTaken) Completed:\(completed)"
+            if curLives >= lives {
                 vicResult = true
+                completed = completed + 1
+                resetIfWin()
+                
             }
-            else {
-                vicResult = false
-            }
+            
             print("WINNER")
+        }
+        else {
+            vicResult = false
+            curLives = curLives - 1
+            if curLives == 0{
+                self.performSegue(withIdentifier: "segue", sender: nil)
+            }
+            livesLabel.text = "Lives: \(curLives) / \(lives)"
+            print(curLives)
         }
     }
     /*

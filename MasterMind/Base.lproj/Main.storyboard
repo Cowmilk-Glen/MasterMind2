@@ -273,7 +273,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Give Up"/>
                                 <connections>
-                                    <segue destination="l9f-d9-Q5t" kind="presentation" id="IhN-Iu-e2o"/>
+                                    <segue destination="l9f-d9-Q5t" kind="presentation" identifier="" id="IhN-Iu-e2o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxw-K4-2Is">
@@ -305,6 +305,7 @@
                         <outlet property="label3" destination="Vtc-hr-fc2" id="ZXq-m0-gF9"/>
                         <outlet property="label4" destination="EUr-R6-Urw" id="2ig-7C-gXZ"/>
                         <outlet property="livesLabel" destination="Yxw-K4-2Is" id="8RR-uu-uVJ"/>
+                        <segue destination="l9f-d9-Q5t" kind="show" identifier="segue" id="vjI-fZ-fde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEa-bo-fPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -557,8 +558,8 @@
         <image name="red" width="700" height="629"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Rui-im-xIe"/>
-        <segue reference="orI-Dg-Fdz"/>
+        <segue reference="vjI-fZ-fde"/>
+        <segue reference="w6V-Z9-oEP"/>
         <segue reference="tIu-0m-dgd"/>
         <segue reference="wF7-48-EZ5"/>
     </inferredMetricsTieBreakers>
