@@ -25,8 +25,6 @@ class PlayGame: UIViewController {
     @IBOutlet weak var button7: UIButton!
     @IBOutlet weak var button8: UIButton!
     
-    
-    
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
@@ -37,16 +35,12 @@ class PlayGame: UIViewController {
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
     
-
-    
-    
-    
+    @IBOutlet weak var livesLabel: UILabel!
     
     var i = 0
     var j = 0
     var k = 0
     var l = 0
-
     
     
     var checkArray: [String] = [""]
@@ -54,6 +48,7 @@ class PlayGame: UIViewController {
     let easyArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     let medArr: [String] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
     let hardArr: [String] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+    var custArr: [String] = [""]
     
     var answerArr: [String] = ["", "", "", ""]
     
@@ -62,8 +57,9 @@ class PlayGame: UIViewController {
     var difficultyLabel: String = ""
     var timeTaken: Float = 0.0
     var triesTaken: Int = 0
+    var lives: Int = 5
+    var curLives: Int = 5
     var vicResult: Bool = false
-
     
     
     override func viewDidLoad() {
@@ -72,11 +68,12 @@ class PlayGame: UIViewController {
         image2.image = UIImage(named: "red")
         image3.image = UIImage(named: "red")
         image4.image = UIImage(named: "red")
+        
+        livesLabel.text = "Lives: \(curLives) / \(lives)"
 
         //Populate answerArr
         answerGenerator(diff: difficulty)
         printAnswerArr()
-
         
         //Main Game Function call
         
@@ -93,6 +90,9 @@ class PlayGame: UIViewController {
         case 2:
             randomizer(poolSet: hardArr)
             difficultyLabel = "Hard"
+        case 3:
+            randomizer(poolSet: custArr)
+            difficultyLabel = "Custom"
         default:
             print("Error- Randomizer(): Incorrect difficulty")
         }
@@ -110,8 +110,11 @@ class PlayGame: UIViewController {
         else if difficulty == 1{
             return medArr
         }
-        else{
+        else if difficulty == 2 {
             return hardArr
+        }
+        else{
+            return custArr
         }
     }
     func randomizer(poolSet: [String]) {
@@ -138,6 +141,7 @@ class PlayGame: UIViewController {
             vc?.timeLabelText = String(timeTaken)
             vc?.difficultyLabelText = difficultyLabel
             vc?.triesLabelText = String(triesTaken)
+            vc?.livesLabelText = String(lives)
             vc?.victoryResult = vicResult
         }
     }
@@ -151,22 +155,18 @@ class PlayGame: UIViewController {
         }
 
         label.text = checkArray[counter]
-        
     }
+    
     func goDownL(_ counter: inout Int, label: UILabel, num: Int) {
         if counter == 0{
             counter = checkArray.count - 1
-            
         }
         else{
         counter = counter - 1
             
         }
         label.text = checkArray[counter]
-        
     }
-
-
     
     @IBAction func oddButtonPressed(_ sender: UIButton) {
         
@@ -215,26 +215,18 @@ class PlayGame: UIViewController {
                 imgNum = image4
             default:
                 print("???")
-                
             }
             
             if (answerArr[x] == screenArr[x]){
                 imgNum?.image = UIImage(named: "green")
             }
-            else if(screenArr.contains(answerArr[x])){
+            else if(answerArr.contains(screenArr[x])){
                 imgNum?.image = UIImage(named: "yellow")
-                
             }
             else{
                 imgNum?.image = UIImage(named: "red")
             }
-            
-            
-            
-            
         }
-
-
     }
     
     func isAllGreen()->Bool{
@@ -247,19 +239,24 @@ class PlayGame: UIViewController {
     }
     
     @IBAction func checkAnswer(_ sender: UIImageView) {
+        triesTaken += 1
+        curLives -= 1
+        livesLabel.text = "Lives: \(curLives) / \(lives)"
+        
         screenArr = [label1.text,label2.text,label3.text,label4.text] as! [String]
         print(screenArr)
         checkColor()
         var winner = isAllGreen()
         if winner == true {
-            //change to new screen
+            if curLives > lives {
+                vicResult = true
+            }
+            else {
+                vicResult = false
+            }
             print("WINNER")
         }
     }
-    
-    
-    
-
     /*
     // MARK: - Navigation
 
@@ -268,6 +265,9 @@ class PlayGame: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
+     
+     else if(screenArr.contains(answerArr[x])){
+     imgNum?.image = UIImage(named: "yellow")
     */
 
 }

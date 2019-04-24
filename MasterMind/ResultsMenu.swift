@@ -14,6 +14,7 @@ class ResultsMenu: UIViewController {
     @IBOutlet weak var timeTakenLabel: UILabel!
     @IBOutlet weak var difficultyLabel: UILabel!
     @IBOutlet weak var triesLabel: UILabel!
+    @IBOutlet weak var livesLabel: UILabel!
     @IBOutlet weak var victoryLabel: UILabel!
     @IBOutlet weak var defeatLabel: UILabel!
     
@@ -22,6 +23,7 @@ class ResultsMenu: UIViewController {
     var timeLabelText: String = ""
     var difficultyLabelText: String = ""
     var triesLabelText: String = ""
+    var livesLabelText: String = ""
     var victoryResult: Bool = false
     
     func printAnswerArr() {
@@ -30,7 +32,6 @@ class ResultsMenu: UIViewController {
             answerLabelText += answerSet[i]
         }
     }
-    
     
     func resultsPrinter() {
         if victoryResult == false {
@@ -51,6 +52,7 @@ class ResultsMenu: UIViewController {
         timeTakenLabel.text = timeLabelText
         difficultyLabel.text = difficultyLabelText
         triesLabel.text = triesLabelText
+        livesLabel.text = livesLabelText
         // Do any additional setup after loading the view.
     }
 
