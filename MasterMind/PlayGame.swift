@@ -214,7 +214,7 @@ class PlayGame: UIViewController {
     }
     
     func checkColor(){
-        var labelArr: [UIImageView] = [image1,image2,image3,image4]
+        //var labelArr: [UIImageView] = [image1,image2,image3,image4]
         var imgNum : UIImageView?
         for x in 0...3{
             switch x{
