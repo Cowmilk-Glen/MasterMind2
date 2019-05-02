@@ -14,6 +14,7 @@
 		34D6179A22568B0600767D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D6179822568B0600767D5E /* LaunchScreen.storyboard */; };
 		34D617A522568B0600767D5E /* MasterMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D617A422568B0600767D5E /* MasterMindTests.swift */; };
 		34D617B022568B0600767D5E /* MasterMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D617AF22568B0600767D5E /* MasterMindUITests.swift */; };
+		34D7D7C3227B5C92006D7187 /* bensound-theelevatorbossanova.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 34D7D7C2227B5C92006D7187 /* bensound-theelevatorbossanova.mp3 */; };
 		9C89D5302270ACEB00FE1DEB /* CustomMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89D52F2270ACEB00FE1DEB /* CustomMenu.swift */; };
 		9CCC31B3225FA9EE0092EFE3 /* DifficultyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */; };
 		9CCC31B5225FAA050092EFE3 /* PlayGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCC31B4225FAA050092EFE3 /* PlayGame.swift */; };
@@ -52,6 +53,7 @@
 		34D617AB22568B0600767D5E /* MasterMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MasterMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D617AF22568B0600767D5E /* MasterMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterMindUITests.swift; sourceTree = "<group>"; };
 		34D617B122568B0600767D5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D7D7C2227B5C92006D7187 /* bensound-theelevatorbossanova.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bensound-theelevatorbossanova.mp3"; sourceTree = "<group>"; };
 		9C89D52F2270ACEB00FE1DEB /* CustomMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenu.swift; sourceTree = "<group>"; };
 		9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyMenu.swift; sourceTree = "<group>"; };
 		9CCC31B4225FAA050092EFE3 /* PlayGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGame.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		34D6178E22568B0400767D5E /* MasterMind */ = {
 			isa = PBXGroup;
 			children = (
+				34D7D7C1227B5C84006D7187 /* Music */,
 				34D6178F22568B0400767D5E /* AppDelegate.swift */,
 				34D6179122568B0400767D5E /* ViewController.swift */,
 				9CCC31B2225FA9EE0092EFE3 /* DifficultyMenu.swift */,
@@ -138,6 +141,14 @@
 				34D617B122568B0600767D5E /* Info.plist */,
 			);
 			path = MasterMindUITests;
+			sourceTree = "<group>";
+		};
+		34D7D7C1227B5C84006D7187 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				34D7D7C2227B5C92006D7187 /* bensound-theelevatorbossanova.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 				34D6179A22568B0600767D5E /* LaunchScreen.storyboard in Resources */,
 				34D6179722568B0600767D5E /* Assets.xcassets in Resources */,
 				34D6179522568B0400767D5E /* Main.storyboard in Resources */,
+				34D7D7C3227B5C92006D7187 /* bensound-theelevatorbossanova.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

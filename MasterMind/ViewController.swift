@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var audio = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        do{
+            audio = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "bensound-theelevatorbossanova", ofType: "mp3")!))
+        }
+        catch{
+            print(error)
+        }
+        audio.play()
+        
     }
 
 
