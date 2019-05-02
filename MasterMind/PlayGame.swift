@@ -231,13 +231,13 @@ class PlayGame: UIViewController {
             }
             
             if (answerArr[x] == screenArr[x]){
-                imgNum?.image = UIImage(named: "green")
+                imgNum?.image = UIImage(named: "greenBulb")
             }
             else if(answerArr.contains(screenArr[x])){
-                imgNum?.image = UIImage(named: "yellow")
+                imgNum?.image = UIImage(named: "yellowBulb")
             }
             else{
-                imgNum?.image = UIImage(named: "red")
+                imgNum?.image = UIImage(named: "redBulb")
             }
         }
     }
