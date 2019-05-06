@@ -160,7 +160,7 @@
                                 <rect key="frame" x="357" y="67" width="39" height="30"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="partialCurl" id="e9h-96-uT1"/>
+                                    <segue destination="BPG-vb-0zZ" kind="presentation" modalTransitionStyle="partialCurl" id="hj1-L0-Tqx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quX-sY-lVA" userLabel="Button1">
@@ -380,7 +380,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BPG-vb-0zZ" kind="presentation" modalTransitionStyle="crossDissolve" id="tIu-0m-dgd"/>
+                                    <segue destination="BPG-vb-0zZ" kind="presentation" modalTransitionStyle="partialCurl" id="tIu-0m-dgd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Character Pools" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72j-c5-WUy">
@@ -466,7 +466,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="wF7-48-EZ5"/>
+                                    <segue destination="BPG-vb-0zZ" kind="presentation" id="zmg-HN-D2E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXK-dO-brP">
@@ -604,7 +604,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="vjI-fZ-fde"/>
         <segue reference="w6V-Z9-oEP"/>
-        <segue reference="jkS-EU-9Ha"/>
-        <segue reference="e9h-96-uT1"/>
+        <segue reference="hj1-L0-Tqx"/>
     </inferredMetricsTieBreakers>
 </document>
