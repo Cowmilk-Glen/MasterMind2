@@ -49,7 +49,6 @@ class ResultsMenu: UIViewController {
         printAnswerArr()
         resultsPrinter()
         answerSetLabel.text = answerLabelText
-        timeTakenLabel.text = timeLabelText
         difficultyLabel.text = difficultyLabelText
         triesLabel.text = triesLabelText
         livesLabel.text = livesLabelText

@@ -15,14 +15,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         do{
             audio = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "bensound-theelevatorbossanova", ofType: "mp3")!))
+            audio.stop()
         }
         catch{
             print(error)
         }
-        audio.play()
+        audio.stop()
         
+        if(!audio.isPlaying)
+        {
+            audio.play()
+        }
     }
 
 

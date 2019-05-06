@@ -16,6 +16,8 @@ class PlayGame: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }*/
     
+    @IBOutlet weak var heartImageView: UIImageView!
+    
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
@@ -62,9 +64,12 @@ class PlayGame: UIViewController {
     var completed: Int = 0
     var vicResult: Bool = false
     
+    var heartImages: [UIImage] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        heartImages = createImageArray(total: 24, imagePrefix: "heart")
         
         
         livesLabel.text = "Lives: \(curLives) / \(lives)"
@@ -268,7 +273,7 @@ class PlayGame: UIViewController {
                 resetIfWin()
                 
             }
-            
+            animate(imageView: heartImageView, images: heartImages)
             print("WINNER")
         }
         else {
@@ -280,6 +285,25 @@ class PlayGame: UIViewController {
             livesLabel.text = "Lives: \(curLives) / \(lives)"
             print(curLives)
         }
+    }
+    
+    func createImageArray(total: Int, imagePrefix: String) -> [UIImage] {
+        var imageArray: [UIImage] = []
+        
+        for imageCount in 0..<total {
+            let imageName = "\(imagePrefix)-\(imageCount).png"
+            let image = UIImage(named: imageName)!
+            imageArray.append(image)
+        }
+        
+        return imageArray
+    }
+    
+    func animate(imageView: UIImageView, images: [UIImage]){
+        imageView.animationImages = images
+        imageView.animationDuration = 1.0
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
     }
     /*
     // MARK: - Navigation
